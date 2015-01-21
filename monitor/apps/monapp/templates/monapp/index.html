@@ -1,0 +1,27 @@
+
+
+{% block description %}Monitor index{%endblock%} 
+{% block title %}Monitor index{% endblock %}
+
+{% block content %}
+    
+{% for host in hosts %}
+    <!-- blog entry -->
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <h3>
+        <a href="#">{{host.HostName}}</a>
+        {{host.Pri_IP}}
+        {% if host.Status == 1%}
+        ON
+        {% else %}
+        OFF
+        {% endif%}
+    </h3>
+    
+    {% endfor %} 
+
+{% endblock %}
