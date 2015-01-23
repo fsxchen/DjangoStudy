@@ -1,0 +1,26 @@
+{% block description %}Monitor index{%endblock%} 
+{% block title %}Monitor index{% endblock %}
+
+{% block content %}
+    <!-- blog entry -->
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <h3>
+        {{host.HostName}} <br> </h3>
+    <h5>
+        IPaddress: {{host.Pri_IP}} <br>
+        {{host.Pub_IP}} <br>
+        {{host.Serial}} <br>
+
+        {% if host.Status == 1%} <br>
+        ON
+        {% else %}
+        OFF
+        {% endif%}
+    </h5>
+    
+
+{% endblock %}

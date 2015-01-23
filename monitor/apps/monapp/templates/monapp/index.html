@@ -13,12 +13,12 @@
     <br>
     
     <h3>
-        <a href="#">{{host.HostName}}</a>
+        <a href="{% url 'host:host_detail' host.Serial %}">{{host.HostName}}</a>
         {{host.Pri_IP}}
-        {% if host.Status == 1%}
-        ON
+        {% if host.Status == 1 %}
+            ON
         {% else %}
-        OFF
+            OFF
         {% endif%}
     </h3>
     
